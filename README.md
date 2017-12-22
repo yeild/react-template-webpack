@@ -1,0 +1,3 @@
+# webpack
+A react-app template build with webpack, support eslint, HMR， ...
+# In the development, coming soon
