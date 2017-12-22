@@ -1,0 +1,6 @@
+{
+  "name": "react-cli-template-webpack",
+  "version": "0.0.1",
+  "description": "A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.",
+  "license": "MIT"
+}
