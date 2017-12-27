@@ -1,11 +1,10 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
-function Header (props) {
+function Header () {
   return (
     <header className="App-header">
-      <h2>{props.name}</h2>
-      { /*      <img src={logo} className="App-logo" alt="logo" /> */ }
-      <h1 className="App-title">Welcome to 1</h1>
+      <img src={logo} className="App-logo" alt="logo"/>
+      <h1 className="App-title">Welcome to React</h1>
     </header>
   )
 }

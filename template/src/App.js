@@ -1,12 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Header from './components/Header'
 function Home () {
   return (
-    <div>
+    <div className="App">
       <Header name="webpack"/>
-      <h2>哈哈11</h2>
-      <button type="test">123</button>
+      <p className="App-intro">
+        To get started, edit <code>src/App.js</code> and save to reload.
+      </p>
     </div>
   )
 }
+
 export default Home
