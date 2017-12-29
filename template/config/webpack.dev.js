@@ -11,6 +11,8 @@ module.exports = merge(baseConfig, {
     open: true,
     quiet: true,
     clientLogLevel: 'warning',
+    // Useful for cross-origin and giving http request a baseURL.
+    // See: https://webpack.js.org/configuration/dev-server/#devserver-proxy
     proxy: {},
   },
   module: {

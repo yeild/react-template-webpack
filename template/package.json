@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.js",
+    "start": "npm run dev",
     "build": "node build"
   },
   "dependencies": {

@@ -1,15 +1,19 @@
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const path = require('path')
+
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 
 module.exports = merge(baseConfig, {
   devtool: 'source-map',
+  output: {
+    filename: 'static/js/[name].[chunkhash].js',
+  },
   module: {
     rules: [
       {

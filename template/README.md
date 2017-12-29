@@ -1,4 +1,4 @@
-# project name
+# *project name*
 
 > A React project
 
