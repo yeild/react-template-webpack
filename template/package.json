@@ -1,4 +1,7 @@
 {
+  "name": "{{ name }}",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "scripts": {
     "dev": "webpack-dev-server --config config/webpack.dev.js",
     "start": "npm run dev",

@@ -1,6 +1,6 @@
-# *project name*
+# {{ name }}
 
-> A React project
+> {{ description }}
 
 ## Build Setup
 
