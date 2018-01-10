@@ -15,6 +15,7 @@ module.exports = {
   },
   module: {
     rules: [
+      {{#lint}}
       {
         test: /\.js$/,
         enforce: 'pre',
@@ -25,6 +26,7 @@ module.exports = {
           emitWarning: true
         }
       },
+      {{/lint}}
       {
         test: /\.js$/,
         include: path.resolve(__dirname, '../src'),

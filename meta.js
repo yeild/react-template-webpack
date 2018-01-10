@@ -1,3 +1,4 @@
+const {sortDependencies, printMessage} = require('./utils')
 module.exports = {
   prompts: {
     name: {
@@ -17,11 +18,11 @@ module.exports = {
     },
     router: {
       type: 'confirm',
-      message: 'Install react-router?'
+      message: 'Use react-router?'
     },
     lint: {
       type: 'confirm',
-      message: 'Use ESLint to lint your code?'
+      message: 'Use ESLint to lint your code? (with eslint-plugin-react)'
     },
     lintConfig: {
       when: 'lint',
@@ -45,5 +46,12 @@ module.exports = {
         }
       ]
     }
+  },
+  filters: {
+    '.eslintrc.js': 'lint'
+  },
+  complete: function (data) {
+    sortDependencies(data)
+    printMessage(data)
   }
 }
