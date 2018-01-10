@@ -1,6 +1,6 @@
 {
   "name": "react-template-webpack",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A zero-configuration Webpack setup for React",
   "license": "MIT"
 }

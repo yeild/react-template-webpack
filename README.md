@@ -1,6 +1,6 @@
 ## react-template-webpack
 
-This is a project template for [init-react](https://github.com/yeild/init-react). (in the development)
+This is a project template for [init-react](https://github.com/yeild/init-react).
 
 ## Usage
 
