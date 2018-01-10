@@ -1,14 +1,19 @@
 import React from 'react'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header'
-function Home () {
+import Home from './pages/home'
+
+function App () {
   return (
     <div className="App">
       <Header name="webpack"/>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+      <Router>
+        <div>
+          <Route path="/" exact component={Home}/>
+        </div>
+      </Router>
     </div>
   )
 }
 
-export default Home
+export default App
