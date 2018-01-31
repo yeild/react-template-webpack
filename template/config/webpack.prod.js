@@ -17,9 +17,9 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: ExtractTextWebpackPlugin.extract({
-          use: "css-loader"
+          use: ["css-loader", 'sass-loader']
         })
       }
     ]
