@@ -22,7 +22,7 @@ module.exports = {
     },
     lint: {
       type: 'confirm',
-      message: 'Use ESLint to lint your code? (with eslint-plugin-react)'
+      message: 'Use ESLint to lint your code? '
     },
     lintConfig: {
       when: 'lint',

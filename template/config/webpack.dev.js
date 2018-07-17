@@ -11,7 +11,6 @@ module.exports = merge(baseConfig, {
     open: true,
     quiet: true,
     clientLogLevel: 'warning',
-    // See: https://webpack.js.org/configuration/dev-server/#devserver-proxy
     proxy: {},
   },
   module: {
