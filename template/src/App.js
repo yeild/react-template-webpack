@@ -2,7 +2,7 @@ import React from 'react'
 {{#router}}
 import { HashRouter as Router, Route } from 'react-router-dom'
 {{/router}}
-import './style/mian.scss'
+import './styles/mian.scss'
 import Header from './components/Header'
 import Home from './pages/home'
 
