@@ -1,6 +1,6 @@
 import React from 'react'
 {{#router}}
-import { HashRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 {{/router}}
 import './styles/mian.scss'
 import Header from './components/Header'

@@ -11,6 +11,7 @@ module.exports = merge(baseConfig, {
     open: true,
     quiet: true,
     clientLogLevel: 'warning',
+    historyApiFallback: true,
     proxy: {},
   },
   module: {
