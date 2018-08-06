@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import Router from './router'
-import './app.scss'
+import './style/common.scss'
 
 const render = Component => {
   ReactDOM.render(

@@ -1,5 +1,7 @@
+@import "../../style/variables";
+
 .app-header {
-  background-color: #222;
+  background-color: $dark;
   height: 150px;
   padding: 20px;
   color: white;

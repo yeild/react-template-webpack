@@ -1,0 +1,17 @@
+@import "variables";
+
+body {
+  margin: 0
+}
+
+.link {
+  text-decoration: none;
+  color: $blue;
+  &:hover {
+    color: $blue-lighter;
+  }
+}
+
+.app {
+  text-align: center;
+}

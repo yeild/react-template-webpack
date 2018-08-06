@@ -9,7 +9,7 @@ function Home () {
         This is <i>home</i> page.
       </p>
       <p>
-        <Link to="/about">see <i>about</i> page</Link>
+        <Link to="/about" className="link">see about</Link>
       </p>
     </div>
   )

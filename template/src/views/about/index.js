@@ -8,7 +8,7 @@ function Home () {
       <p className="app-intro">
         This is <i>about</i> page.
       </p>
-      <p><Link to="/">back to home</Link></p>
+      <p><Link to="/" className="link">back to home</Link></p>
     </div>
   )
 }
