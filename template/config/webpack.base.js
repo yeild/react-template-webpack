@@ -1,16 +1,24 @@
 const path = require('path')
 
+const resolve = (dir) => path.join(__dirname, '..', dir)
+
 module.exports = {
   entry: {
     app: [
       'react-hot-loader/patch',
-      './src/main',
+      './src/app',
     ]
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: resolve('dist'),
     filename: '[name].js',
     publicPath: '',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@': resolve('src')
+    }
   },
   module: {
     rules: [
@@ -19,7 +27,7 @@ module.exports = {
         test: /\.js$/,
         enforce: 'pre',
         loader: 'eslint-loader',
-        include: path.resolve(__dirname, '../src'),
+        include: resolve('src'),
         options: {
           formatter: require("eslint-friendly-formatter"),
           emitWarning: true
@@ -28,7 +36,7 @@ module.exports = {
       {{/lint}}
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, '../src'),
+        include: resolve('src'),
         use: 'babel-loader'
       },
       {

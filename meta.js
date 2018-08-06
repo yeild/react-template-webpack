@@ -16,10 +16,6 @@ module.exports = {
       type: 'input',
       message: 'Author'
     },
-    router: {
-      type: 'confirm',
-      message: 'Use react-router?'
-    },
     lint: {
       type: 'confirm',
       message: 'Use ESLint to lint your code? '

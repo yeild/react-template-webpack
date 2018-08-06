@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"{{#router}},
-    "react-router-dom": "^4.2.2"{{/router}}
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     {{#lint}}
