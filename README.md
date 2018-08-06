@@ -25,3 +25,7 @@ $ npm run dev
   - Auto-generated production `index.html` with proper URLs to these generated assets.
   - Extract JavaScript & CSS inside *node_modules* into *vendor*
 
+## 1.1.0 update
+- Redesign the project structure
+  - Move .scss into there component dir
+  - Remove *Use react-router confirm* -- Who use react without react-router

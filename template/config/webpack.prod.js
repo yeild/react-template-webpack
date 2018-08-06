@@ -43,7 +43,7 @@ module.exports = merge(baseConfig, {
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '../static'),
+        from: path.resolve(__dirname, '../src/static'),
         to: 'static'
       }
     ]),
