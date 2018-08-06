@@ -27,5 +27,5 @@ $ npm run dev
 
 ## 1.1.0 update
 - Redesign the project structure
-  - Move .scss into there component dir
-  - Remove *Use react-router confirm* --- Who will use react without react-router :)
+- Move .scss into there component dir
+- Remove *Use react-router confirm* --- Who will use react without react-router :)
