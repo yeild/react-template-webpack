@@ -11,6 +11,7 @@ module.exports = {
     'plugin:react/recommended'
   ],
   plugins: ['react'],
-  // add your custom rules here
-  rules: {}
+  rules: {
+    'react/display-name': 0
+  }
 }
