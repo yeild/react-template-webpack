@@ -24,8 +24,3 @@ $ npm run dev
   - All source minified and named with *chunkhash* for long-term caching
   - Auto-generated production `index.html` with proper URLs to these generated assets.
   - Extract JavaScript & CSS inside *node_modules* into *vendor*
-
-## 1.1.0 update
-- Redesign the project structure
-- Move .scss into there component dir
-- Remove *Use react-router confirm* --- Who will use react without react-router :)
