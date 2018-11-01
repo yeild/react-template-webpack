@@ -6,13 +6,13 @@ module.exports = {
   entry: {
     app: [
       'react-hot-loader/patch',
-      './src/app',
+      './src/app'
     ]
   },
   output: {
     path: resolve('dist'),
     filename: '[name].js',
-    publicPath: '',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],

@@ -12,7 +12,7 @@ const baseConfig = require('./webpack.base')
 module.exports = merge(baseConfig, {
   devtool: 'source-map',
   output: {
-    filename: 'static/js/[name].[chunkhash].js',
+    filename: 'static/js/[name].[chunkhash].js'
   },
   module: {
     rules: [
