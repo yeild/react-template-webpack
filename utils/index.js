@@ -18,7 +18,7 @@ exports.sortDependencies = function sortDependencies(data) {
 exports.printMessage = function printMessage(data) {
   console.log('---------------')
   console.log('To get started:')
-  console.log(data)
+  if (!data.inPlace) console.log('  cd', data.name)
   console.log('  npm install')
   console.log('  npm run dev')
 }

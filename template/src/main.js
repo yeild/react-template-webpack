@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Router from './router'
+import App from './views/app'
 import './style/common.scss'
 
 const render = Component => {
@@ -13,10 +13,10 @@ const render = Component => {
   )
 }
 
-render(Router)
+render(App)
 
 if (module.hot) {
   module.hot.accept('./router', () => {
-    render(Router)
+    render(App)
   })
 }

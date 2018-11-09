@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './about.scss'
 
-function Home () {
+function About () {
   return (
     <div>
       <p className="app-intro">
@@ -13,4 +12,4 @@ function Home () {
   )
 }
 
-export default Home
+export default About

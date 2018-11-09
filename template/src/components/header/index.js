@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './header.scss'
+
 function Header () {
   return (
     <header className="app-header">
