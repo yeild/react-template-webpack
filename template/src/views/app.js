@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
 import Header from '@/components/header'
 import Home from '@/views/home'
 import About from '@/views/about'

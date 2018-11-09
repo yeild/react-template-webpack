@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './views/app'
-import './style/common.scss'
+import './styles/common.scss'
 
 const render = Component => {
   ReactDOM.render(
@@ -16,7 +16,7 @@ const render = Component => {
 render(App)
 
 if (module.hot) {
-  module.hot.accept('./router', () => {
+  module.hot.accept('./views/app', () => {
     render(App)
   })
 }
