@@ -6,6 +6,7 @@
     "react-hot-loader/babel",
     "@babel/plugin-transform-runtime",
     "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-proposal-do-expressions",
     ["@babel/plugin-proposal-class-properties", { "loose": false }]
   ]
 }
