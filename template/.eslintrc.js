@@ -13,5 +13,10 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/display-name': 0
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 }
