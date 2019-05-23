@@ -1,4 +1,5 @@
 const {sortDependencies, printMessage} = require('./utils')
+
 module.exports = {
   prompts: {
     name: {
