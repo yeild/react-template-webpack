@@ -3,12 +3,7 @@ const path = require('path')
 const resolve = (dir) => path.join(__dirname, '..', dir)
 
 module.exports = {
-  entry: {
-    app: [
-      'react-hot-loader/patch',
-      './src'
-    ]
-  },
+  entry: './src',
   output: {
     path: resolve('dist'),
     filename: '[name].js',
