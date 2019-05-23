@@ -1,15 +1,14 @@
-@import "variables";
-
 body {
   margin: 0
 }
 
 .link {
   text-decoration: none;
-  color: $blue;
-  &:hover {
-    color: $blue-lighter;
-  }
+  color: #1890ff;
+}
+
+.link:hover {
+  color: #40a9ff;
 }
 
 .app {
