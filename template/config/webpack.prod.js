@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -10,6 +10,7 @@ const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 
 module.exports = merge(baseConfig, {
+  mode: 'production',
   devtool: 'source-map',
   output: {
     filename: 'static/js/[name].[chunkhash].js'
@@ -18,11 +19,30 @@ module.exports = merge(baseConfig, {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextWebpackPlugin.extract({
-          use: ["css-loader"]
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       }
     ]
+  },
+  optimization: {
+    minimize: true,
+    splitChunks: {
+      chunks: 'all',
+      minSize: 0,
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        manifest: {
+          name: 'manifest',
+          priority: -20
+        }
+      }
+    }
   },
   plugins: [
     new CleanWebpackPlugin(
@@ -48,27 +68,12 @@ module.exports = merge(baseConfig, {
       }
     ]),
     new webpack.HashedModuleIdsPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: function (module) {
-        // any required modules inside node_modules are extracted to vendor
-         return module.context && module.context.indexOf("node_modules") !== -1
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "manifest",
-      minChunks: Infinity
-    }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      parallel: true
-    }),
-    new ExtractTextWebpackPlugin({
+    new MiniCssExtractPlugin({
       filename: 'static/css/[name].[contenthash].css'
     }),
     new OptimizeCssAssetsPlugin()
