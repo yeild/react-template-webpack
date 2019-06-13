@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { hot } from 'react-hot-loader/root'
 import Header from '@/components/header'

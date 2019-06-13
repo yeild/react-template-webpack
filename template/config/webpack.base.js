@@ -3,14 +3,18 @@ const path = require('path')
 const resolve = (dir) => path.join(__dirname, '..', dir)
 
 module.exports = {
+  {{#typescript}}
+  entry: './src/index.tsx',
+  {{else}}
   entry: './src',
+  {{/typescript}}
   output: {
     path: resolve('dist'),
     filename: '[name].js',
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx'{{#typescript}}, '.ts', '.tsx'{{/typescript}}],
     alias: {
       '@': resolve('src')
     }
@@ -29,11 +33,19 @@ module.exports = {
         }
       },
       {{/lint}}
+      {{#typescript}}
+      {
+        test: /\.(tsx?|jsx)$/,
+        include: resolve('src'),
+        use: 'ts-loader'
+      },
+      {{else}}
       {
         test: /\.js$/,
         include: resolve('src'),
         use: 'babel-loader'
       },
+      {{/typescript}}
       {
         test: /\.(png|gif|svg|jpe?g)$/,
         use: [

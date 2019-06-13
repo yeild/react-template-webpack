@@ -33,6 +33,13 @@
     "eslint-plugin-import": "^2.7.0",
     {{/if_eq}}
     {{/lint}}
+    {{#typescript}}
+    "typescript": "^3.4.5",
+    "ts-loader": "^6.0.1",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.3",
+    {{else}}
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-do-expressions": "^7.2.0",
@@ -40,6 +47,7 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.6",
+    {{/typescript}}
     "chalk": "^2.3.0",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.0",

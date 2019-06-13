@@ -42,10 +42,32 @@ module.exports = {
           short: 'none'
         }
       ]
+    },
+    typescript: {
+      type: 'confirm',
+      message: 'Use TypeScript? '
     }
   },
   filters: {
-    '.eslintrc.js': 'lint'
+    lint: ['.eslintrc.js'],
+    typescript: [
+      [
+        'modules.d.ts',
+        'tsconfig.json',
+        'src/components/header/index.tsx',
+        'src/views/about/index.tsx',
+        'src/views/home/index.tsx',
+        'src/views/app.tsx',
+        'src/index.tsx'
+      ],
+      [
+        'src/components/header/index.js',
+        'src/views/about/index.js',
+        'src/views/home/index.js',
+        'src/views/app.js',
+        'src/index.js',
+      ]
+    ]
   },
   complete: function (data) {
     sortDependencies(data)
