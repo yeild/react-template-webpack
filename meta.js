@@ -1,4 +1,16 @@
+const exec = require('child_process').execSync
 const {sortDependencies, printMessage} = require('./utils')
+
+let version = ''
+
+try {
+  version = exec('react -V')
+} catch (e) {}
+
+if (version.toString().trim() === '1.0.0') {
+  throw new Error('current init-react version doesn\'t support this template, ' +
+    'please run `npm i init-react@latest -g` and try again!')
+}
 
 module.exports = {
   prompts: {
@@ -74,5 +86,14 @@ module.exports = {
   complete: function (data) {
     sortDependencies(data)
     printMessage(data)
+    try {
+      const version = exec('react -V')
+      if (version === '1.0.0') {
+        console.log('can\'t remove unused file, please update init-react to latest version!')
+      }
+    } catch (e) {
+      console.log('can\'t remove unused file, please update init-react to latest version!')
+      console.log(e)
+    }
   }
 }
