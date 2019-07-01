@@ -58,6 +58,10 @@ module.exports = {
     typescript: {
       type: 'confirm',
       message: 'Use TypeScript? '
+    },
+    test: {
+      type: 'confirm',
+      message: 'Set up unit test with Jest?'
     }
   },
   filters: {
@@ -72,15 +76,23 @@ module.exports = {
         'src/views/about/index.tsx',
         'src/views/home/index.tsx',
         'src/views/app.tsx',
-        'src/index.tsx'
+        'src/index.tsx',
+        'src/index.test.tsx'
       ],
       [
-        'src/components/header/index.js',
-        'src/views/about/index.js',
-        'src/views/home/index.js',
-        'src/views/app.js',
-        'src/index.js',
+        'src/components/header/index.jsx',
+        'src/views/about/index.jsx',
+        'src/views/home/index.jsx',
+        'src/views/app.jsx',
+        'src/index.jsx',
+        'src/index.test.jsx'
       ]
+    ],
+    test: [
+      'jest.config.js',
+      'stub.js',
+      'src/index.test.tsx',
+      'src/index.test.jsx'
     ]
   },
   complete: function (data) {

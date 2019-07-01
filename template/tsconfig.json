@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es6",
-    "sourceMap": false,
-    "jsx": "react",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "es6",
+    "jsx": "react",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

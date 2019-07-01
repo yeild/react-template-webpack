@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config config/webpack.dev.js",
     "start": "npm run dev",
-    "build": "node build"
+    "build": "node build",
+    "test": "jest"
   },
   "dependencies": {
     "react": "^16.8.6",
@@ -52,6 +53,14 @@
     "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.6",
     {{/typescript}}
+    {{#test}}
+    "jest": "^24.8.0",
+    {{#typescript}}
+    "ts-jest"
+    "@types/jest": "^24.0.15",
+    {{else}}
+    "babel-jest": "^24.8.0",
+    {{/test}}
     "chalk": "^2.3.0",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.0",
