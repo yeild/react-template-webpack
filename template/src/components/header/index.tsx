@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as logo from './logo.svg'
+import React from 'react'
+import logo from './logo.svg'
 import './header.css'
 
 function Header () {

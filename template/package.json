@@ -16,7 +16,7 @@
   "devDependencies": {
     {{#lint}}
     "babel-eslint": "^8.0.3",
-    "eslint": "^4.13.1",
+    "eslint": "^6.0.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-react": "^7.5.1",
@@ -36,9 +36,13 @@
     {{#typescript}}
     "typescript": "^3.4.5",
     "ts-loader": "^6.0.1",
-    "@types/react": "^16.8.18",
+    "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
-    "@types/react-router-dom": "^4.3.3",
+    "@types/react-router-dom": "^4.3.4",
+    {{#lint}}
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    {{/lint}}
     {{else}}
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",

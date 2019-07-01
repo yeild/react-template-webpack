@@ -23,7 +23,11 @@ module.exports = {
     rules: [
       {{#lint}}
       {
+        {{#typescript}}
+        test: /\.(tsx?|jsx?)$/,
+        {{else}}
         test: /\.js$/,
+        {{/typescript}}
         enforce: 'pre',
         loader: 'eslint-loader',
         include: resolve('src'),
