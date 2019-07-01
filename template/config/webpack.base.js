@@ -32,7 +32,7 @@ module.exports = {
         loader: 'eslint-loader',
         include: resolve('src'),
         options: {
-          formatter: require("eslint-friendly-formatter"),
+          formatter: require('eslint-friendly-formatter'),
           emitWarning: true
         }
       },
