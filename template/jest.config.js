@@ -3,11 +3,11 @@ module.exports = {
     {{#typescript}}
     '^.+\\.(tsx?|jsx?)$': 'ts-jest'
     {{else}}
-    '^.+\\.js$': 'babel-jest'
+    '^.+\\.jsx?$': 'babel-jest'
     {{/typescript}}
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '.(css|png|gif|svg|jpe?g)$': '<rootDir>/fileStub.js'
+    '.(css|png|gif|svg|jpe?g)$': '<rootDir>/stub.js'
   }
 }

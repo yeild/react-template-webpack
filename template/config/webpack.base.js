@@ -26,7 +26,7 @@ module.exports = {
         {{#typescript}}
         test: /\.(tsx?|jsx?)$/,
         {{else}}
-        test: /\.js$/,
+        test: /\.jsx?$/,
         {{/typescript}}
         enforce: 'pre',
         loader: 'eslint-loader',
@@ -45,7 +45,7 @@ module.exports = {
       },
       {{else}}
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: resolve('src'),
         use: 'babel-loader'
       },
