@@ -67,8 +67,7 @@ module.exports = {
   filters: {
     lint: ['.eslintrc.js'], // if key = false, the listed files will be removed
     typescript: [
-      // if key = true, keep arr[0] and remove arr[1]
-      // if key = false, remove arr[0] and keep arr[1]
+      // if key = true, remove arr[1]; if key = false, remove arr[0]
       [
         'modules.d.ts',
         'tsconfig.json',
@@ -80,6 +79,7 @@ module.exports = {
         'src/index.test.tsx'
       ],
       [
+        '.babelrc',
         'src/components/header/index.jsx',
         'src/views/about/index.jsx',
         'src/views/home/index.jsx',
