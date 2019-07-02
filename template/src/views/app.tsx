@@ -5,7 +5,7 @@ import Header from '@/components/header'
 import Home from './home'
 import About from './about'
 
-function Router () {
+function App () {
   return (
     <div className="app">
       <Header/>
@@ -19,4 +19,4 @@ function Router () {
   )
 }
 
-export default hot(Router)
+export default hot(App)
