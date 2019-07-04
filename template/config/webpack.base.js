@@ -16,7 +16,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'{{#typescript}}, '.ts', '.tsx'{{/typescript}}],
     alias: {
-      '@': resolve('src')
+      'src': resolve('src')
     }
   },
   module: {
