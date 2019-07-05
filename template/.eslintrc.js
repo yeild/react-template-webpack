@@ -17,13 +17,19 @@ module.exports = {
   {{#typescript}}
   plugins: [
     '@typescript-eslint',
-    'react'
+    'react',
+    'react-hooks'
   ],
   {{else}}
-  plugins: ['react'],
+  plugins: [
+    'react',
+    'react-hooks'
+  ],
   {{/typescript}}
   rules: {
-    'react/display-name': 0
+    'react/display-name': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   },
   settings: {
     react: {
