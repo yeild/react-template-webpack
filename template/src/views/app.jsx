@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { hot } from 'react-hot-loader/root'
 import Header from 'src/components/header'
 import Home from './home'
 import About from './about'
@@ -19,4 +18,4 @@ function App () {
   )
 }
 
-export default hot(App)
+export default App
